@@ -1,5 +1,5 @@
 
-> Diese Seite bei [https://calliope-net.github.io/uhr-speicherkarte-dipschalter-lcd/](https://calliope-net.github.io/uhr-speicherkarte-dipschalter-lcd/) öffnen
+> Diese Seite bei [https://calliope-net.github.io/i2c-uhr-speicherkarte-dipschalter-lcd/](https://calliope-net.github.io/uhr-speicherkarte-dipschalter-lcd/) öffnen
 
 ![](icon.png)
 
@@ -29,7 +29,7 @@ Um dieses Repository in MakeCode zu importieren.
 * öffne [https://makecode.calliope.cc](https://makecode.calliope.cc/)
 * klicke auf **Importieren** und dann auf **Importiere URL**
 * kopiere die folgende **URL des Projekts** in die Zwischenablage (Strg-C)
-* **calliope-net/uhr-speicherkarte-dipschalter-lcd**
+* **calliope-net/i2c-uhr-speicherkarte-dipschalter-lcd**
 * füge sie auf der MakeCode Webseite ein (Strg-V) und klicke auf **Los geht's!**
 
 ### Bedienung der 'Calliope-App': mit dem DIP Schalter wird eingestellt:
