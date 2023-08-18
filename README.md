@@ -29,7 +29,7 @@ Um dieses Repository in MakeCode zu importieren.
 * öffne [https://makecode.calliope.cc](https://makecode.calliope.cc/)
 * klicke auf **Importieren** und dann auf **Importiere URL**
 * kopiere die folgende **URL des Projekts** in die Zwischenablage (Strg-C)
-* **calliope-net/i2c-test**
+* **calliope-net/uhr-speicherkarte-dipschalter-lcd**
 * füge sie auf der MakeCode Webseite ein (Strg-V) und klicke auf **Los geht's!**
 
 ### Bedienung der 'Calliope-App': mit dem DIP Schalter wird eingestellt:
@@ -65,14 +65,6 @@ alle Erweiterungen (Software) werden automatisch von GitHub geladen
 * [https://github.com/calliope-net/log-qwiicopenlog](https://calliope-net.github.io/log-qwiicopenlog/)
 * [https://github.com/calliope-net/rtc-pcf85063tp](https://calliope-net.github.io/rtc-pcf85063tp/)
 
-![](blocks.png)
-
-> Für eigene Entwicklungen, oder wenn i2c Module fehlen, können nicht benötigte Erweiterungen gelöscht werden.
-> Dazu in der **JavaScript** Ansicht links unter dem Simulator im schwarzen Explorer auf den Mülleimer klicken.
-> Mit dem Pfeil-Symbol kann die Erweiterung aktualisiert werden, wenn es ein Update gab.
-
-![](explorer.png)
-
 ### Updates
 
 > Um ein Update einer Erweiterung von GitHub zu laden, klicke in der JavaScript Ansicht
@@ -82,7 +74,7 @@ alle Erweiterungen (Software) werden automatisch von GitHub geladen
 
 ### Calliope-Apps, .hex-Dateien, Bildschirmfotos mit Blöcken
 
-* [Calliope-App mit vier i2c Modulen gleichzeitig, DIP-Schalter, Speicherkarte, LCD-Display, Uhr.](https://calliope-net.github.io/i2c-test/)
+* [Calliope-App mit vier i2c Modulen gleichzeitig, DIP-Schalter, Speicherkarte, LCD-Display, Uhr.](https://calliope-net.github.io/uhr-speicherkarte-dipschalter-lcd/)
 * [Calliope-App Quarz-Uhr anzeigen, stellen mit Knopf A/B, Korrektur-Register, Binär-Uhr.](https://calliope-net.github.io/i2c-uhr-stellen/)
 * [Calliope-App Dateien der Speicherkarte anzeigen, lesen, schreiben, löschen, mit Knopf A/B.](https://calliope-net.github.io/i2c-speicherkarte-verwalten/)
 
@@ -90,21 +82,6 @@ alle Erweiterungen (Software) werden automatisch von GitHub geladen
 
 * [i2c-Erweiterungen für MakeCode (Software)](https://calliope-net.github.io/i2c-test#erweiterungen)
 * [i2c-Module und Bezugsquellen (Hardware)](https://calliope-net.github.io/i2c-test#bezugsquellen)
-
-### Bezugsquellen
-
-* [Grove - I2C Hub (6 Port)](https://www.mouser.de/ProductDetail/713-103020272)
-* [Grove - 6-Position DIP Switch](https://www.mouser.de/ProductDetail/713-111020043)
-* [Grove - 5-Way Switch](https://www.mouser.de/ProductDetail/713-111020048)
-* [Grove - 16 x 2 LCD (White on Blue)](https://www.mouser.de/ProductDetail/713-104020111)
-* [Grove - 16 x 2 LCD (Black on Red)](https://www.mouser.de/ProductDetail/713-104020112)
-* [Grove - 16 x 2 LCD (Black on Yellow)](https://www.mouser.de/ProductDetail/713-104020113)
-* [Grove - LCD RGB Backlight](https://www.mouser.de/ProductDetail/713-104030001)
-* [Grove - High Precision RTC](https://www.mouser.de/ProductDetail/713-102020083)
-* [SparkFun Qwiic OpenLog](https://www.mouser.de/ProductDetail/474-DEV-15164)
-* [SparkFun Qwiic OpenLog](https://www.digikey.de/de/products/detail/sparkfun-electronics/DEV-15164/9920435)
-* [Qwiic Cable - Grove Adapter (100mm)](https://www.mouser.de/ProductDetail/474-PRT-15109)
-* [Qwiic Adapter](https://www.mouser.de/ProductDetail/474-DEV-14495)
 
 #### Metadaten (verwendet für Suche, Rendering)
 
