@@ -1,11 +1,11 @@
-function LCDZeile0(row: number) {
+function LCDZeile0 (row: number) {
     if (input.buttonIsPressed(Button.B)) {
         lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, row, 3, 11, lcd16x2rgb.eAlign.left, bit.formatNumber(dipswitch.getBIN(), bit.eLength.BIN_11111111))
     } else {
         lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, row, 0, 11, lcd16x2rgb.eAlign.left, rtcpcf85063tp.getDate(rtcpcf85063tp.ePart.mit, rtcpcf85063tp.ePart.ohne))
     }
 }
-function Hintergrundfarbe() {
+function Hintergrundfarbe () {
     if (dipswitch.getON(dipswitch.eSwitch.DIP4, dipswitch.eONOFF.ON)) {
         rot = 63
     } else {
@@ -23,13 +23,13 @@ function Hintergrundfarbe() {
     }
     lcd16x2rgb.setRGB(lcd16x2rgb.eADDR_RGB.RGB_16x2_V5, rot, grün, blau)
 }
-function Speicherkarte() {
+function Speicherkarte () {
     Dateiname = "" + rtcpcf85063tp.getyyMMddHHmmss(0, 8) + ".CSV"
     lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, 0, 0, 11, lcd16x2rgb.eAlign.left, Dateiname)
     lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, 1, 3, 11, lcd16x2rgb.eAlign.left, rtcpcf85063tp.getTime(rtcpcf85063tp.ePart.mit))
     qwiicopenlog.writeFile(qwiicopenlog.eADDR.LOG_Qwiic, Dateiname, "" + Dateiname + ";" + rtcpcf85063tp.getDate(rtcpcf85063tp.ePart.mit, rtcpcf85063tp.ePart.mit) + ";" + rtcpcf85063tp.getTime(rtcpcf85063tp.ePart.mit) + ";" + bit.formatNumber(dipswitch.getBIN(), bit.eLength.BIN_11111111) + ";" + input.temperature() + "°C;x:" + DrehungX + ";y:" + DrehungY + ";INT:" + bHardwareInterrupt + ";RGB:" + bRGBvorhanden, qwiicopenlog.eCRLF.CRLF)
 }
-function Binäruhr25LEDs() {
+function Binäruhr25LEDs () {
     _("DIP Schalter 2:Zeit 2+3:Datum 3:löschen aus:Matrix unverändert lassen")
     if (dipswitch.getON(dipswitch.eSwitch.DIP2, dipswitch.eONOFF.ON) && dipswitch.getON(dipswitch.eSwitch.DIP3, dipswitch.eONOFF.ON)) {
         rtcpcf85063tp.Anzeige25LED(rtcpcf85063tp.e25LED.Datum)
@@ -43,11 +43,11 @@ input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
     _("schaltet i2c Lagesensor x-y an")
     bLagesensor = true
 })
-function LCDZeile1(row: number) {
+function LCDZeile1 (row: number) {
     lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, row, 3, 11, lcd16x2rgb.eAlign.left, rtcpcf85063tp.getTime(rtcpcf85063tp.ePart.mit))
 }
-function _(Kommentar: string) {
-
+function _ (Kommentar: string) {
+	
 }
 pins.onPulsed(DigitalPin.P0, PulseValue.Low, function () {
     _("wenn Pin mit CLK am Uhr Modul per Draht verbunden ist, kann der Hardware-Interrupt (1 Sekunde) benutzt werden")
@@ -55,7 +55,7 @@ pins.onPulsed(DigitalPin.P0, PulseValue.Low, function () {
     lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, 1, 0, 0, lcd16x2rgb.eAlign.left, String.fromCharCode(bit.hex(bit.H4.xE0, bit.H0.x9)))
     i2cCode()
 })
-function i2cCode() {
+function i2cCode () {
     _("Code, der den i2c Bus aufruft, darf nur in einem Ereignis (im selben Thread) stehen")
     rtcpcf85063tp.readDateTime(rtcpcf85063tp.eADDR.RTC_PCF85063TP)
     dipswitch.readSwitch(dipswitch.eADDR.DIP_SWITCH)
