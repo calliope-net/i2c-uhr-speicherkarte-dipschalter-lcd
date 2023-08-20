@@ -1,5 +1,5 @@
 
-> Diese Seite bei [https://calliope-net.github.io/i2c-uhr-speicherkarte-dipschalter-lcd/](https://calliope-net.github.io/uhr-speicherkarte-dipschalter-lcd/) öffnen
+Diese Seite bei [https://calliope-net.github.io/i2c-uhr-speicherkarte-dipschalter-lcd/](https://calliope-net.github.io/i2c-uhr-speicherkarte-dipschalter-lcd/) öffnen.
 
 ![](icon.png)
 
@@ -11,18 +11,20 @@
 * [Grove - High Precision RTC (Real Time Clock)](https://wiki.seeedstudio.com/Grove_High_Precision_RTC/)
 * [Grove - I2C Hub(6 Port)](https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/)
 
-Alle i2c Module werden parallel am linken Grove Steckverbinder A0 angeschlossen. 
-Dazu kann ein [i2c-Hub](https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/) benutzt werden.
-i2c Module mit zwei Buchsen (z.B. Qwiic) können hintereinander gesteckt werden.
+Kabel und Adapter
 
+* [Grove - I2C Hub(6 Port)](https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/)
+* [Qwiic Cable - Grove Adapter](https://www.sparkfun.com/products/15109)
+
+Alle i2c Module werden parallel am linken Grove Steckverbinder A0 angeschlossen. 
 Für die Stromversorgung sollte Calliope über USB Kabel (an Computer oder Powerbank) angeschlossen sein.
 
-### .hex-Datei direkt auf Calliope laden, oder in MakeCode importieren.
+#### .hex-Datei direkt auf Calliope laden, oder in MakeCode importieren.
 
-* [mini-i2c-test.hex](mini-i2c-test.hex)
-* [Schnappschuss (Bildschirmfoto mit den Blöcken)](mini-i2c-test.png)
+* [mini-i2c-uhr-speicherkarte-dipschalter-lcd.hex](mini-i2c-uhr-speicherkarte-dipschalter-lcd.hex)
+* [Schnappschuss (Bildschirmfoto mit den Blöcken)](mini-i2c-uhr-speicherkarte-dipschalter-lcd.png)
 
-### Dieses Projekt von GitHub importieren, bearbeiten, mit Calliope testen.
+#### Dieses Projekt von GitHub importieren, bearbeiten, mit Calliope testen.
 
 Um dieses Repository in MakeCode zu importieren.
 
@@ -32,7 +34,9 @@ Um dieses Repository in MakeCode zu importieren.
 * **calliope-net/i2c-uhr-speicherkarte-dipschalter-lcd**
 * füge sie auf der MakeCode Webseite ein (Strg-V) und klicke auf **Los geht's!**
 
-### Bedienung der 'Calliope-App': mit dem DIP Schalter wird eingestellt:
+### Bedienung der Calliope-App 'i2c-uhr-speicherkarte-dipschalter-lcd'
+
+Mit dem DIP Schalter wird eingestellt:
 
 * Schalter 1 OFF: LCD Display zeigt Datum und Uhrzeit an (dauerhaft jede Sekunde)
   * solange Knopf B gedrückt: zeigt den Zustand der 6 DIP Schalter binär am LCD Display an
@@ -46,42 +50,38 @@ Um dieses Repository in MakeCode zu importieren.
 * Schalter 2 OFF 3 ON: LED-Matrix löschen
 * Schalter 4-5-6: Hintergrundfarbe r-g-b, wenn ein Display mit 'Backlight' angeschlossen ist (eine weitere i2c Adresse)
 
-> Einmalig Knopf A+B geklickt schaltet zusätzlich den Lagesensor (Drehung x- y-Achse) an (auch am i2c Bus).
-> Danach werden im Sekundentakt die x und y Winkel im LCD Display rechts angezeigt (und auf Speicherkarte protokolliert).
+Einmalig Knopf A+B geklickt schaltet zusätzlich den Lagesensor (Drehung x- y-Achse) an (auch am i2c Bus).
+Danach werden im Sekundentakt die x und y Winkel im LCD Display rechts angezeigt (und auf Speicherkarte protokolliert).
 
-> Der Sekundentakt kann von einer 'alle 1000 ms' Schleife kommen. Genauer geht es, wenn ein PIN mit CLK am RTC-Modul verdrahtet wird.
-> Das wird erkennt und schaltet die Schleife ab. Ein Symbol wird links unten angezeigt.
+Der Sekundentakt kann von einer 'alle 1000 ms' Schleife kommen. Genauer geht es, wenn ein PIN mit CLK am RTC-Modul verdrahtet wird.
+Das wird erkennt und schaltet die Schleife ab. Ein Symbol wird links unten angezeigt.
 
-> Auf dem LCD Display haben verschiedene Funktionen einen eigenen Bereich, ohne sich zu überschreiben.
+Auf dem LCD Display haben verschiedene Funktionen einen eigenen Bereich, ohne sich zu überschreiben.
 
 ### Erweiterungen
 
-alle Erweiterungen (Software) werden automatisch von GitHub geladen
+Die Calliope-App 'i2c-uhr-speicherkarte-dipschalter-lcd' lädt folgende Erweiterungen:
 
 * [https://github.com/calliope-net/bit](https://calliope-net.github.io/bit/)
 * [https://github.com/calliope-net/i2c](https://calliope-net.github.io/i2c/)
-* [https://github.com/calliope-net/dip-switch](https://calliope-net.github.io/dip-switch/)
+* [https://github.com/calliope-net/rtc-pcf85063tp](https://calliope-net.github.io/rtc-pcf85063tp/)
 * [https://github.com/calliope-net/lcd-16x2rgb](https://calliope-net.github.io/lcd-16x2rgb/)
 * [https://github.com/calliope-net/log-qwiicopenlog](https://calliope-net.github.io/log-qwiicopenlog/)
-* [https://github.com/calliope-net/rtc-pcf85063tp](https://calliope-net.github.io/rtc-pcf85063tp/)
+* [https://github.com/calliope-net/dip-switch](https://calliope-net.github.io/dip-switch/)
 
-### Updates
+> [Upates für Erweiterungen; Erweiterungen aus einem Projekt löschen.](https://calliope-net.github.io/i2c-test#updates)
 
-> Um ein Update einer Erweiterung von GitHub zu laden, klicke in der JavaScript Ansicht
-> links unter dem Simulator auf den schwarzen Explorer. Dort steht der Name der Erweiterung
-> vor einem Mülleimer- und einem Pfeil-Symbol. Mit dem Mülleimer wird die Erweiterung gelöscht,
-> mit dem runden Pfeil nach einem Update gesucht. Danach steht dort eine Versionsnummer.
+> [Alle i2c-Erweiterungen für MakeCode von calliope-net (Software).](https://calliope-net.github.io/i2c-test#erweiterungen)
 
-### Calliope-Apps, .hex-Dateien, Bildschirmfotos mit Blöcken
+#### Calliope-Apps, .hex-Dateien, Bildschirmfotos mit Blöcken
 
-* [Calliope-App mit vier i2c Modulen gleichzeitig, DIP-Schalter, Speicherkarte, LCD-Display, Uhr.](https://calliope-net.github.io/uhr-speicherkarte-dipschalter-lcd/)
-* [Calliope-App Quarz-Uhr anzeigen, stellen mit Knopf A/B, Korrektur-Register, Binär-Uhr.](https://calliope-net.github.io/i2c-uhr-stellen/)
-* [Calliope-App Dateien der Speicherkarte anzeigen, lesen, schreiben, löschen, mit Knopf A/B.](https://calliope-net.github.io/i2c-speicherkarte-verwalten/)
+> [Alle Beispiel-Projekte für MakeCode von calliope-net (Calliope-Apps).](https://calliope-net.github.io/i2c-test#programmierbeispiele)
 
-### Material
+> GitHub-Profil calliope-net: [https://github.com/calliope-net](https://github.com/calliope-net)
 
-* [i2c-Erweiterungen für MakeCode (Software)](https://calliope-net.github.io/i2c-test#erweiterungen)
-* [i2c-Module und Bezugsquellen (Hardware)](https://calliope-net.github.io/i2c-test#bezugsquellen)
+### Bezugsquellen
+
+> [Alle i2c-Module und Bezugsquellen (Hardware).](https://calliope-net.github.io/i2c-test#bezugsquellen)
 
 #### Metadaten (verwendet für Suche, Rendering)
 
