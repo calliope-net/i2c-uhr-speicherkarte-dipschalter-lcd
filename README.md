@@ -15,7 +15,8 @@ Kabel und Adapter
 * [Grove - I2C Hub(6 Port)](https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/)
 * [Qwiic Cable - Grove Adapter](https://www.sparkfun.com/products/15109)
 
-Alle i2c Module werden parallel am linken Grove Steckverbinder A0 angeschlossen. 
+Alle i2c Module werden parallel am linken Grove Steckverbinder A0 angeschlossen. Dazu kann ein i2c-Hub benutzt werden.
+
 Für die Stromversorgung sollte Calliope über USB Kabel (an Computer oder Powerbank) angeschlossen sein.
 
 #### .hex-Datei direkt auf Calliope laden, oder in MakeCode importieren.
@@ -33,7 +34,7 @@ Um dieses Repository in MakeCode zu importieren.
 * **calliope-net/i2c-uhr-speicherkarte-dipschalter-lcd**
 * füge sie auf der MakeCode Webseite ein (Strg-V) und klicke auf **Los geht's!**
 
-### Bedienung der Calliope-App 'i2c-uhr-speicherkarte-dipschalter-lcd'
+### Bedienung der Calliope-App 'i2c-uhr-speicherkarte-dipschalter-lcd'.
 
 Mit dem DIP Schalter wird eingestellt:
 
