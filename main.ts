@@ -52,7 +52,7 @@ function _ (Kommentar: string) {
 pins.onPulsed(DigitalPin.P0, PulseValue.Low, function () {
     _("wenn Pin mit CLK am Uhr Modul per Draht verbunden ist, kann der Hardware-Interrupt (1 Sekunde) benutzt werden")
     bHardwareInterrupt = true
-    lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, 1, 0, 0, lcd16x2rgb.eAlign.left, String.fromCharCode(bit.hex(bit.H4.xE0, bit.H0.x9)))
+    lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, 1, 0, 0, lcd16x2rgb.eAlign.left, String.fromCharCode(233))
     i2cCode()
 })
 function i2cCode () {

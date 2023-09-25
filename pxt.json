@@ -6,7 +6,7 @@
         "rtc-pcf85063tp": "github:calliope-net/rtc-pcf85063tp#v1.0.2",
         "log-qwiicopenlog": "github:calliope-net/log-qwiicopenlog#v1.0.4",
         "lcd-16x2rgb": "github:calliope-net/lcd-16x2rgb#v1.0.2",
-        "bit": "github:calliope-net/bit#v1.0.1"
+        "bit": "github:calliope-net/bit#v1.0.6"
     },
     "files": [
         "main.blocks",
@@ -17,7 +17,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "4.0.35",
+        "target": "4.0.29",
         "targetId": "calliopemini"
     },
     "supportedTargets": [
