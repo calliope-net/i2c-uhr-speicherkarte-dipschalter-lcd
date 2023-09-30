@@ -3,9 +3,9 @@
     "dependencies": {
         "core": "*",
         "bit": "github:calliope-net/bit#v1.0.6",
-        "rtc-uhr": "github:calliope-net/rtc-uhr",
-        "lcd-16x2": "github:calliope-net/lcd-16x2",
-        "openlog": "github:calliope-net/openlog",
+        "rtc-uhr": "github:calliope-net/rtc-uhr#v1.1.1",
+        "lcd-16x2": "github:calliope-net/lcd-16x2#v1.1.0",
+        "openlog": "github:calliope-net/openlog#v1.1.0",
         "dip-switch": "github:calliope-net/dip-switch#v1.0.2"
     },
     "files": [
