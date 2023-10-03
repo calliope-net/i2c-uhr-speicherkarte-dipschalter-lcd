@@ -58,7 +58,7 @@ pins.onPulsed(DigitalPin.P0, PulseValue.Low, function () {
 function i2cCode () {
     _("Code, der den i2c Bus aufruft, darf nur in einem Ereignis (im selben Thread) stehen")
     rtcpcf85063tp.readDateTime(rtcpcf85063tp.eADDR.RTC_PCF85063TP)
-    dipswitch.readSwitch(dipswitch.eADDR.DIP_SWITCH)
+    dipswitch.readSwitch(dipswitch.dipswitch_eADDR(dipswitch.eADDR.DIP_SWITCH))
     Binäruhr25LEDs()
     if (bLagesensor) {
         DrehungX = input.rotation(Rotation.Pitch)
@@ -89,9 +89,9 @@ lcd16x2rgb.initLCD(lcd16x2rgb.eADDR_LCD.LCD_16x2)
 qwiicopenlog.checkStatusRegister(qwiicopenlog.eADDR.LOG_Qwiic)
 bLagesensor = false
 bHardwareInterrupt = false
-dipswitch.readSwitch(dipswitch.eADDR.DIP_SWITCH)
+dipswitch.readSwitch(dipswitch.dipswitch_eADDR(dipswitch.eADDR.DIP_SWITCH))
 _("i2c Adresse RGB nur aufrufen, wenn einer der Schalter 4-5-6 ON ist")
-if (bit.bitwise(dipswitch.getBIN(), bit.eBit.AND, bit.parseint("111000", 2)) != 0) {
+if (bit.bitwise(dipswitch.getBIN(), bit.eBit.AND, bit.parseint("111000")) != 0) {
     lcd16x2rgb.initRGB(lcd16x2rgb.eADDR_RGB.RGB_16x2_V5)
     bRGBvorhanden = true
 }
