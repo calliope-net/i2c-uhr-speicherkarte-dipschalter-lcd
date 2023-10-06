@@ -62,12 +62,12 @@ Auf dem LCD Display haben verschiedene Funktionen einen eigenen Bereich, ohne si
 
 Die Calliope-App 'i2c-uhr-speicherkarte-dipschalter-lcd' lädt folgende Erweiterungen:
 
-Erweiterung für MakeCode|Blöcke zur Programmierung der Module
+Erweiterung für MakeCode|Blöcke zur Programmierung der i2c-Module
 ---|---
 [calliope-net/bit](https://calliope-net.github.io/bit/) | Blöcke für HEX-Zahlen, bitweise Logik
 [calliope-net/rtc-uhr](https://calliope-net.github.io/rtc-uhr/) | Quarz-Uhr mit Knopfzelle
 [calliope-net/lcd-16x2](https://calliope-net.github.io/lcd-16x2/) | LCD-Display 16 Zeichen x 2 Zeilen
-[calliope-net/openlog](https://calliope-net.github.io/openlog/) | Speicherkarte lesen/schreiben
+[calliope-net/openlog](https://calliope-net.github.io/openlog/) | Dateien auf Speicherkarte lesen/schreiben/löschen
 [calliope-net/dip-switch](https://calliope-net.github.io/dip-switch/) | 6 DIP-Schalter oder '5-Way_Switch'
 
 > [Upates für Erweiterungen; Erweiterungen aus einem Projekt löschen.](https://calliope-net.github.io/i2c-liste#updates)
