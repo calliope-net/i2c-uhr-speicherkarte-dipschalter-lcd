@@ -66,7 +66,7 @@ Die Calliope-App 'i2c-uhr-speicherkarte-dipschalter-lcd' lädt folgende Erweiter
 * [https://github.com/calliope-net/i2c](https://calliope-net.github.io/i2c/)
 * [https://github.com/calliope-net/rtc-uhr](https://calliope-net.github.io/rtc-uhr/)
 * [https://github.com/calliope-net/lcd-16x2](https://calliope-net.github.io/lcd-16x2/)
-* [https://github.com/calliope-net/openlog](https://calliope-net.github.io/copenlog/)
+* [https://github.com/calliope-net/openlog](https://calliope-net.github.io/openlog/)
 * [https://github.com/calliope-net/dip-switch](https://calliope-net.github.io/dip-switch/)
 
 > [Upates für Erweiterungen; Erweiterungen aus einem Projekt löschen.](https://calliope-net.github.io/i2c-liste#updates)
