@@ -57,18 +57,22 @@ pins.onPulsed(DigitalPin.P0, PulseValue.Low, function () {
 })
 function i2cCode () {
     _("Code, der den i2c Bus aufruft, darf nur in einem Ereignis (im selben Thread) stehen")
+    rtcpcf85063tp.readDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))
+    dipswitch.readSwitch(dipswitch.dipswitch_eADDR(dipswitch.eADDR.DIP_SWITCH_x03))
     Binäruhr25LEDs()
     if (bLagesensor) {
         DrehungX = input.rotation(Rotation.Pitch)
         DrehungY = input.rotation(Rotation.Roll)
+        lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), 0, 12, 15, DrehungX, lcd16x2rgb.eAlign.right)
+        lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), 1, 12, 15, DrehungY, lcd16x2rgb.eAlign.right)
     }
     if (bRGBvorhanden) {
         Hintergrundfarbe()
     }
-    if (true) {
+    if (dipswitch.getON(dipswitch.eSwitch.DIP1, dipswitch.eONOFF.OFF)) {
         LCDZeile0(0)
         LCDZeile1(1)
-    } else if (0 == 0) {
+    } else if (rtcpcf85063tp.getByte(rtcpcf85063tp.rtcpcf85063tp_eRegister(rtcpcf85063tp.eRegister.Sekunde), rtcpcf85063tp.eFormat.einer) == 0) {
         Speicherkarte()
     }
 }
