@@ -64,8 +64,7 @@ Die Calliope-App 'i2c-uhr-speicherkarte-dipschalter-lcd' lädt folgende Erweiter
 
 Erweiterung für MakeCode|Blöcke zur Programmierung der Module
 ---|---
-[calliope-net/bit](https://calliope-net.github.io/bit/) | Blöcke zur Formatierung von Text und Zahlen (HEX), Logik (bitweise)
-[calliope-net/i2c](https://calliope-net.github.io/i2c/) | Verwendung von *Buffer* mit Blöcken, i2cWriteBuffer, i2cReadBuffer
+[calliope-net/bit](https://calliope-net.github.io/bit/) | Blöcke zur Formatierung von Text und Zahlen, Logik
 [calliope-net/rtc-uhr](https://calliope-net.github.io/rtc-uhr/) | Quarz-Uhr mit Knopfzelle
 [calliope-net/lcd-16x2](https://calliope-net.github.io/lcd-16x2/) | LCD-Display 16 Zeichen x 2 Zeilen
 [calliope-net/openlog](https://calliope-net.github.io/openlog/) | Speicherkarte lesen/schreiben
