@@ -81,10 +81,13 @@ let rot = 0
 let bRGBvorhanden = false
 let bHardwareInterrupt = false
 let bLagesensor = false
+lcd16x2rgb.initLCD(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2))
+qwiicopenlog.checkStatusRegister(qwiicopenlog.qwiicopenlog_eADDR(qwiicopenlog.eADDR.LOG_x2A))
 bLagesensor = false
 bHardwareInterrupt = false
+dipswitch.readSwitch(dipswitch.dipswitch_eADDR(dipswitch.eADDR.DIP_SWITCH_x03))
 _("i2c Adresse RGB nur aufrufen, wenn einer der Schalter 4-5-6 ON ist")
-if (bit.bitwise(0, bit.eBit.AND, bit.parseint("111000")) != 0) {
+if (bit.bitwise(dipswitch.getBIN(), bit.eBit.AND, bit.parseint("111000", 2)) != 0) {
     bRGBvorhanden = true
 }
 loops.everyInterval(1000, function () {
