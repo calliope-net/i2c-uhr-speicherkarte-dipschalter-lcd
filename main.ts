@@ -46,15 +46,15 @@ input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
 function LCDZeile1 (row: number) {
     lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), row, 3, 11, lcd16x2rgb.lcd16x2_text(rtcpcf85063tp.getTime(rtcpcf85063tp.ePart.mit)))
 }
+pins.onPulsed(DigitalPin.P2, PulseValue.Low, function () {
+    _("wenn Pin mit CLK am Uhr Modul per Draht verbunden ist, kann der Hardware-Interrupt (1 Sekunde) benutzt werden")
+    bHardwareInterrupt = true
+    lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), 1, 0, 0, lcd16x2rgb.lcd16x2_text(String.fromCharCode(bit.hex8(bit.eHEX8bit.xE9))))
+    i2cCode()
+})
 function _ (Kommentar: string) {
 	
 }
-pins.onPulsed(DigitalPin.P0, PulseValue.Low, function () {
-    _("wenn Pin mit CLK am Uhr Modul per Draht verbunden ist, kann der Hardware-Interrupt (1 Sekunde) benutzt werden")
-    bHardwareInterrupt = true
-    lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), 0, 0, 0, lcd16x2rgb.lcd16x2_text(String.fromCharCode(bit.hex8(bit.eHEX8bit.xE9))))
-    i2cCode()
-})
 function i2cCode () {
     _("Code, der den i2c Bus aufruft, darf nur in einem Ereignis (im selben Thread) stehen")
     rtcpcf85063tp.readDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))
@@ -92,6 +92,7 @@ bHardwareInterrupt = false
 dipswitch.readSwitch(dipswitch.dipswitch_eADDR(dipswitch.eADDR.DIP_SWITCH_x03))
 _("i2c Adresse RGB nur aufrufen, wenn einer der Schalter 4-5-6 ON ist")
 if (bit.bitwise(dipswitch.getBIN(), bit.eBit.AND, bit.parseint("111000", 2)) != 0) {
+    lcd16x2rgb.initRGB(lcd16x2rgb.lcd16x2rgb_eADDR(lcd16x2rgb.eADDR_RGB.RGB_16x2_V5))
     bRGBvorhanden = true
 }
 loops.everyInterval(1000, function () {
